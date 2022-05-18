@@ -1,5 +1,9 @@
-.home{
+.main{
     background: url(./Images//back.png);
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* .main{
     background-color: rgba(0, 0, 0, 0.607);

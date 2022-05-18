@@ -26,6 +26,7 @@ function Home() {
                 px-[10%] py-[2%]'>Get Started</button>
             </div>
           </div>
+          <div className="grid grid-cols-4 w-full px-[5%]"></div>
         </div>
     </div>
   )
