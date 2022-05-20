@@ -13,9 +13,13 @@ exports.addMovie = async(req,res)=>{
     const uploaded_response = await cloudinary.uploader.upload(req.body.movieString,{
     upload_preset:'wiwo'
 })
-console.log(uploaded_response.secure_url)
-const movie = await movieSchema({
-    date:date,
-    
-})
+    console.log(uploaded_response.secure_url)
+    const movie = await movieSchema({
+        date:date,
+        movieName:req.body.movieName,
+        movieUrl:uploaded_response.secure_url,
+        genre:req.body.genre
+    })
+    await movie.save()
+    return res.status(201).json({message:"Movie uploaded successfuly"})
 }
