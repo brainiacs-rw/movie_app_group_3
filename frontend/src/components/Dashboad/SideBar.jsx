@@ -16,7 +16,7 @@ function SideBar() {
   window.addEventListener('scroll', handleScroll, true);
 
   return (
-    <div className="flex flex-col items-center text-white">
+    <div className="flex text-sm flex-col items-center text-white">
       <div className="flex h-full py-6 flex-col pl-4 pr-1 bg-[#3A435B] w-[220px] justify-between">
         <div className="logo flex">
           <img src={logo} alt="" />
@@ -25,7 +25,7 @@ function SideBar() {
         <div className="flex flex-col h-[70vh] overflow-auto ">
           <div className="flex flex-col">
             <div onClick={()=> setExpand({...expand, cat: !expand.cat})}
-            className="flex w-full justify-between text-xl items-center cursor-pointer">
+            className="flex w-full justify-between text-lg items-center cursor-pointer">
               <p className="font-semibold ">Categories</p>
               <BiCaretDown className={`duration-150  ${expand.cat && 'rotate-[-180deg]'}`} />
             </div>
@@ -68,7 +68,7 @@ function SideBar() {
           </div>
           <div className="flex flex-col">
             <div onClick={()=> setExpand({...expand, rec: !expand.rec})}
-            className="flex w-full justify-between text-xl items-center cursor-pointer">
+            className="flex w-full justify-between text-lg items-center cursor-pointer">
               <p className="font-semibold ">Account</p>
               <BiCaretDown className={`duration-150  ${expand.rec && 'rotate-[-180deg]'}`} />
             </div>

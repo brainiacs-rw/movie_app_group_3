@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 /* .main{
     background-color: rgba(0, 0, 0, 0.607);
 } */
@@ -48,4 +49,7 @@ div * {
   
   .on-scrollbar::-webkit-scrollbar-thumb {
     background-color: #acacac;
+  }
+  .previmg{
+    background: url(./components//Dashboad/Images/venomlong.png);
   }

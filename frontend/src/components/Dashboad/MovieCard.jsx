@@ -1,17 +1,17 @@
 import React from 'react'
 import { BiAlarm, BiStar, BiTimeFive } from 'react-icons/bi';
-import movie from '../../Images/movie3.png'
+// import movie from '../../Images/movie3.jpg'
 
 function MovieCard() {
   return (
-    <div className='w-full flex bg-[#3C4049] p-2 flex-col rounded-2xl'>
+    <div className='w-full flex bg-[#3C4049] cursor-pointer p-2 flex-col rounded-2xl'>
         <div className="flex w-full h-[140px]">
             <img className='min-w-full min-h-full object-cover'
              src={movie} alt="" />
         </div>
         <div className="flex w-full mt-2 items-start justify-between px-3">
             <div className="flex flex-col w-2/3">
-                <h1 className="text-2xl font-semibold">SpiderMan</h1>
+                <h1 className="text-lg font-semibold">SpiderMan</h1>
                 <p>The fastest man alive in short 
                 right on your screen</p>
             </div>
