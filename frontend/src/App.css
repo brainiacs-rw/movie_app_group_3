@@ -52,5 +52,5 @@ div * {
   }
   .previmg{
     /* background: url(./components//Dashboad/Images/venomlong.png); */
-    background: linear-gradient(to top, black, rgba(3, 3, 3, 0.626));
+    background: linear-gradient(to top, black, rgba(3, 3, 3, 0.785), rgba(3, 3, 3, 0));
   }
