@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-// import Admin from "./Admin";
+import Admin from "./Admin";
 import Feed from "./Feed";
 import SideBar from "./SideBar";
 
 function DashBoard() {
-//   const [route, setRooute] = useState("feed");
+  const [SidePath, setSidePath] = useState("feed");
 
   return (
     <div className="flex text-sm fixed h-screen w-full">
-      <SideBar />
-       <Feed />
-      {/* {route === "admin" && <Admin />} */}
+      <SideBar setSidePath={setSidePath} />
+        {SidePath === "feed" && <Feed />}
+      {SidePath === "admin" && <Admin />}
     </div>
   );
 }

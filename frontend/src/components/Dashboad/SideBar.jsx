@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import logo from "../../Images/logo.png";
 import WIWO from "../../Images/WIWO.png";
 
-function SideBar() {
+function SideBar({setSidePath}) {
   const [expand, setExpand] = useState({cat: false, rec: false});
 
 
@@ -75,10 +75,14 @@ function SideBar() {
             </div>
             {expand.rec && (
               <div className="flex flex-col ml-4">
-                <Link to='/dashboard/admin' className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
+                <div onClick={()=> setSidePath('feed')} className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
                   <BiUserCircle className=" text-pink-700 text-2xl" />
                   <p className="ml-3">Profile</p>
-                </Link>
+                </div>
+                <div onClick={()=> setSidePath('admin')} className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
+                  <BiUserCircle className=" text-pink-700 text-2xl" />
+                  <p className="ml-3">Profile</p>
+                </div>
                 <div className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
                   <i className="fa-solid fa-wand-magic-sparkles text-pink-700 text-2xl"></i>
                   <p className="ml-3">Recommended</p>
