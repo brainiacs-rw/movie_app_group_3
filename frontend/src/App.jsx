@@ -1,18 +1,21 @@
-import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import Admin from './Admin'
-import {BrowserRouter,Route,Link,Routes} from 'react-router-dom'
+
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from './components/Home';
+import DashBoard from './components/Dashboad/DashBoard';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
       <BrowserRouter>
       <Routes>
         <Route path='/admin' element={<Admin/>}></Route>
-      </Routes>
+
+          <Route path='/' element={<Home />}/>
+          <Route path='/dashboard' element={<DashBoard />}/>
+        </Routes>
       </BrowserRouter>
     </div>
   )
