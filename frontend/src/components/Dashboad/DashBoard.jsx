@@ -5,15 +5,15 @@ import SideBar from './SideBar';
 
 function DashBoard() {
   return (
-    <div className='flex fixed h-screen w-full'>
+    <div className='flex text-sm fixed h-screen w-full'>
         <SideBar />
         <div className="flex flex-col w-full p-6 bg-[#33363F] text-white">
             <div className="flex w-full items-center justify-between">
-                <p className="font-bold text-3xl">Good afternoon, Lysa</p>
+                <p className="font-bold text-2xl">Good afternoon, Lysa</p>
                 <div className="flex items-center">
-                    <BiBell className='text-3xl ml-3 text-white'/>
-                    <BiUser className='text-3xl ml-3 text-white'/>
-                    <BiCog  className='text-3xl ml-3 text-white'/>
+                    <BiBell className='text-2xl ml-3 text-white'/>
+                    <BiUser className='text-2xl ml-3 text-white'/>
+                    <BiCog  className='text-2xl ml-3 text-white'/>
                     <div className="p-4 ml-3 bg-slate-500 rounded-full"></div>
                 </div>
             </div>
@@ -24,7 +24,7 @@ function DashBoard() {
             </div>
             <div className="flex flex-col">
                 <p>Category</p>
-                <h1 className="text-4xl text-bold">Action</h1>
+                <h1 className="text-2xl text-bold">Action</h1>
             </div>
             <div className="grid grid-cols-3 gap-[7%] overflow-auto">
                 <MovieCard />

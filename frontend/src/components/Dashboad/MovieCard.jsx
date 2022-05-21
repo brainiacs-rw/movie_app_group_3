@@ -11,7 +11,7 @@ function MovieCard() {
         </div>
         <div className="flex w-full mt-2 items-start justify-between px-3">
             <div className="flex flex-col w-2/3">
-                <h1 className="text-2xl font-semibold">SpiderMan</h1>
+                <h1 className="text-lg font-semibold">SpiderMan</h1>
                 <p>The fastest man alive in short 
                 right on your screen</p>
             </div>
