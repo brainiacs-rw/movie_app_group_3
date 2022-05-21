@@ -8,10 +8,44 @@
 /* .main{
     background-color: rgba(0, 0, 0, 0.607);
 } */
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
   width: 10px;
+  position: absolute;
 }
 ::-webkit-scrollbar-thumb{
   background-color: rgb(91, 90, 96);
   border-radius: 10px;
-}
+} */
+div * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+} 
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: none !important;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 3px !important;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  .on-scrollbar{
+    scrollbar-width: thin; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+  
+  .on-scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  
+  .on-scrollbar::-webkit-scrollbar {
+    width: 6px !important;
+    background-color: transparent;
+  }
+  
+  .on-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #acacac;
+  }
