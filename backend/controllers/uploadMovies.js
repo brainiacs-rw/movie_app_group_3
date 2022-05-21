@@ -9,22 +9,46 @@ cloudinary.config({
 });
 
 exports.addMovie = async (req, res) => {
-  const date = moment().format("dddd, MMMM Do YYYY");
-  // const uploaded_response = await cloudinary.uploader.upload(
-  //   req.body.movieString,
-  //   {
-  //     upload_preset: "wiwo",
-  //   }
-  // );
-  // console.log(uploaded_response.secure_url);
+  try {
+    console.log(req.body)
+    const date = moment().format("dddd, MMMM Do YYYY");
+    const uploaded_response = await cloudinary.uploader.upload_large(
+    req.body.movieString,
+    {
+      upload_preset:'wiwo',
+      resource_type: "video",
+      chunk_size: 6000000,
+      eager: [
+        { width: 300, height: 300, crop: "pad", audio_codec: "none" },
+        {
+          width: 160,
+          height: 100,
+          crop: "crop",
+          gravity: "south",
+          audio_codec: "none",
+        },
+      ],
+      eager_async: true,
+      eager_notification_url: "http://localhost:4040/admin",
+    },
+    (error, result) => {
+      if(error) return console.log(error)
+      console.log(result);
+    }
+  );
+  console.log(uploaded_response.secure_url);
+
   const movie = await movieSchema({
     date: date,
     movieName: req.body.movieName,
-    movieUrl: "uploaded_response.secure_url",
+    movieUrl: uploaded_response.secure_url,
     genre: req.body.genre,
   });
   await movie.save();
   return res.status(201).json({ message: "Movie uploaded successfuly" });
+} catch (error) {
+ console.log(error) 
+}
 };
 exports.allMovies = async (req, res) => {
   const movies = await movieSchema.find();
