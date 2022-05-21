@@ -1,6 +1,6 @@
 import React from 'react'
 import { BiAlarm, BiStar, BiTimeFive } from 'react-icons/bi';
-import movie from '../../Images/image3.jpg'
+import movie from '../../Images/image2.jpg'
 
 function MovieCard() {
   return (

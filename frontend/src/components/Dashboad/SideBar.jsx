@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BiCaretDown, BiCaretUp, BiCog, BiListUl, BiMask, BiSave, BiTable, BiUserCircle } from "react-icons/bi";
 import { FaHatWizard, FaHeart, FaMask, FaSkull } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "../../Images/logo.png";
 import WIWO from "../../Images/WIWO.png";
 
@@ -74,10 +75,10 @@ function SideBar() {
             </div>
             {expand.rec && (
               <div className="flex flex-col ml-4">
-                <div className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
+                <Link to='/dashboard/admin' className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
                   <BiUserCircle className=" text-pink-700 text-2xl" />
                   <p className="ml-3">Profile</p>
-                </div>
+                </Link>
                 <div className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
                   <i className="fa-solid fa-wand-magic-sparkles text-pink-700 text-2xl"></i>
                   <p className="ml-3">Recommended</p>
