@@ -11,12 +11,12 @@ function MoviewPreview() {
         <div className="flex text-white flex-col w-full">
             <div className="flex  flex-col w-full h-1/2 rounded-b-3xl bg-black">
                 <img 
-                className='min-w-100 min-h-full object-cover  rounded-b-3xl opacity-40'
+                className='min-w-100 min-h-full object-cover  rounded-b-3xl opacity-60'
                 src="https://images.thedirect.com/media/article_full/venom-2-tom-hardy.jpg?imgeng=cmpr_75/" alt="" />
                 <div className="flex previmg translate-y-[-88px] py-5 justify-center rounded-b-3xl  top-[40% w-full items-center">
                     <div className="flex items-center mr-6">
                         <BiCircle className='text-4xl'/>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col ml-5">
                             <p>3.21K Votes</p>
                             <p>Reccomended by WIWO users</p>
                         </div>
