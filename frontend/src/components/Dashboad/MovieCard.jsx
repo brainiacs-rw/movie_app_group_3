@@ -4,7 +4,7 @@ import movie from '../../Images/movie3.png'
 
 function MovieCard() {
   return (
-    <div className='w-full flex bg-[#3C4049] p-2 flex-col rounded-2xl'>
+    <div className='w-full flex bg-[#3C4049] cursor-pointer p-2 flex-col rounded-2xl'>
         <div className="flex w-full h-[140px]">
             <img className='min-w-full min-h-full object-cover'
              src={movie} alt="" />
