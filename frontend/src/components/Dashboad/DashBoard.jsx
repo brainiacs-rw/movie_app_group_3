@@ -8,8 +8,8 @@ function DashBoard() {
   return (
     <div className="flex text-sm fixed h-screen w-full">
       <SideBar setRooute={setRooute} />
-      {/* {route === "feed" && <DashBoard />}
-      {route === "admin" && <Admin />} */}
+       <DashBoard />
+      {/* {route === "admin" && <Admin />} */}
     </div>
   );
 }
