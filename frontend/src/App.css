@@ -50,3 +50,6 @@ div * {
   .on-scrollbar::-webkit-scrollbar-thumb {
     background-color: #acacac;
   }
+  .previmg{
+    background: url(./components//Dashboad/Images/venomlong.png);
+  }
