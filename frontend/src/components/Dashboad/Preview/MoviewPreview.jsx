@@ -9,11 +9,11 @@ function MoviewPreview() {
             <BiArrowBack className='text-2xl rounded-full p-1 cursor-pointer bg-white' />
         </div>
         <div className="flex text-white flex-col w-full">
-            <div className="flex previmg flex-col w-full h-1/2 rounded-b-3xl bg-black">
+            <div className="flex  flex-col w-full h-1/2 rounded-b-3xl bg-black">
                 <img 
-                className='min-w-100 min-h-full object-cover  rounded-b-3xl opacity-50'
+                className='min-w-100 min-h-full object-cover  rounded-b-3xl opacity-40'
                 src="https://images.thedirect.com/media/article_full/venom-2-tom-hardy.jpg?imgeng=cmpr_75/" alt="" />
-                <div className="flex translate-y-[-88px] py-5 justify-center rounded-b-3xl  top-[40%] bg-opacity-70 bg-black w-full items-center">
+                <div className="flex previmg translate-y-[-88px] py-5 justify-center rounded-b-3xl  top-[40% w-full items-center">
                     <div className="flex items-center mr-6">
                         <BiCircle className='text-4xl'/>
                         <div className="flex flex-col">
@@ -21,12 +21,11 @@ function MoviewPreview() {
                             <p>Reccomended by WIWO users</p>
                         </div>
                     </div>
-                    <button className='px-4 border-2
+                    <button className='px-4 border-[1px] border-slate-200
                             hover:bg-blue-500 flex items-center py-2 rounded-3xl bg-transparent'>
                             <BiPlayCircle className='text-[#0E65E8]' />
                             <p>TRAILER</p>
                         </button>
-
                 </div>
             </div>
             <div className="flex h-full w-full justify-between items-start mt-9">
