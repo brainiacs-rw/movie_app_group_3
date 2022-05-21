@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SideBar from "./SideBar";
 
 function Admin() {
   const [movieName, setMovieName] = useState("");
@@ -41,9 +42,11 @@ function Admin() {
     console.log(data);
   };
   return (
-    <div className=" form h-screen w-full flex flex-col items-center">
+    <div className='flex text-sm fixed h-screen w-full'>
+      <SideBar />
+    <div className=" form h-screen w-full flex flex-col bg-[#16181F] text-white items-center">
       <script src="https://cdn.tailwindcss.com"></script>
-      <div className="m-auto w-1/3 flex flex-col shadow-2xl p-4 items-center">
+      <div className="m-auto w-1/3 flex flex-col bg-[#373B48] bg-opacity-70 shadow-2xl p-4 items-center">
         <div className="inNav ml-2 mb-3 logo w-full flex flex-col items-center justify-center">
           <form onSubmit={handleSubmit}>
 
@@ -73,6 +76,7 @@ function Admin() {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 }
