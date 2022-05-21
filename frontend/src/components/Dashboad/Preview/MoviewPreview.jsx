@@ -1,6 +1,7 @@
 import React from 'react'
 import { BiArrowBack, BiCircle, BiDotsVerticalRounded, BiHeart, BiPlayCircle, BiShareAlt } from 'react-icons/bi';
 import ven from '../Images/ven.png'
+import CircularProgress from '@mui/material/CircularProgress'
 
 function MoviewPreview() {
   return (
@@ -15,7 +16,10 @@ function MoviewPreview() {
                 src="https://images.thedirect.com/media/article_full/venom-2-tom-hardy.jpg?imgeng=cmpr_75/" alt="" />
                 <div className="flex previmg translate-y-[-88px] py-5 justify-center rounded-b-3xl  top-[40% w-full items-center">
                     <div className="flex items-center mr-6">
-                        <BiCircle className='text-4xl'/>
+                        <div className="flex">
+                            <CircularProgress variant="determinate" value={80} />
+                            <p className='absolute text-[0.7em] translate-x-3 translate-y-3'>80%</p>
+                        </div>
                         <div className="flex flex-col ml-5">
                             <p>3.21K Votes</p>
                             <p>Reccomended by WIWO users</p>
