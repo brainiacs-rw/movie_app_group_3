@@ -19,9 +19,9 @@ function SideBar({setSidePath}) {
   return (
     <div className="flex text-sm flex-col items-center text-white">
       <div className="flex h-full py-6 flex-col pl-4 pr-1 bg-[#3A435B] w-[220px] justify-between">
-        <div className="logo flex">
+        <div className="logo flex items-center">
           <img src={logo} alt="" />
-          <img className="scale-50 translate-x-[-30px]" src={WIWO} alt="" />
+          <div className="logo text-3xl text-white">WIWO</div>
         </div>
         <div className="flex flex-col h-[70vh] overflow-auto ">
           <div className="flex flex-col">
