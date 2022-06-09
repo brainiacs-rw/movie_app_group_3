@@ -1,6 +1,7 @@
 import React from 'react'
 import { BiAlarm, BiStar, BiTimeFive } from 'react-icons/bi';
 import movie from '../../Images/image2.jpg'
+import { Link } from 'react-router-dom'
 
 function MovieCard() {
   return (
@@ -26,7 +27,7 @@ function MovieCard() {
         <div className="flex items-center justify-end w-full">
             <BiAlarm className='text-2xl'/>
             <BiTimeFive className='ml-2 text-2xl' />
-            <button className='py-1 px-2 ml-2 bg-red-500'>WATCH</button>
+            <Link to='/preview' className='py-1 px-2 ml-2 bg-red-500'>WATCH</Link>
         </div>
     </div>
   )

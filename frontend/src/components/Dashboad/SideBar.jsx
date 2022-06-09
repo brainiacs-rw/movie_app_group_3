@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import logo from "../../Images/logo.png";
 import WIWO from "../../Images/WIWO.png";
 
-function SideBar() {
+function SideBar({setSidePath}) {
   const [expand, setExpand] = useState({cat: false, rec: false});
 
 
@@ -19,9 +19,9 @@ function SideBar() {
   return (
     <div className="flex text-sm flex-col items-center text-white">
       <div className="flex h-full py-6 flex-col pl-4 pr-1 bg-[#3A435B] w-[220px] justify-between">
-        <div className="logo flex">
+        <div className="logo flex items-center">
           <img src={logo} alt="" />
-          <img className="scale-50 translate-x-[-30px]" src={WIWO} alt="" />
+          <div className="logo text-3xl text-white">WIWO</div>
         </div>
         <div className="flex flex-col h-[70vh] overflow-auto ">
           <div className="flex flex-col">
@@ -75,10 +75,14 @@ function SideBar() {
             </div>
             {expand.rec && (
               <div className="flex flex-col ml-4">
-                <Link to='/dashboard/admin' className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
+                <div onClick={()=> setSidePath('feed')} className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
                   <BiUserCircle className=" text-pink-700 text-2xl" />
                   <p className="ml-3">Profile</p>
-                </Link>
+                </div>
+                <div onClick={()=> setSidePath('admin')} className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
+                  <BiUserCircle className=" text-pink-700 text-2xl" />
+                  <p className="ml-3">Profile</p>
+                </div>
                 <div className="flex mt-3 p-1 cursor-pointer hover:bg-gray-700 px-2 rounded-xl items-center w-full">
                   <i className="fa-solid fa-wand-magic-sparkles text-pink-700 text-2xl"></i>
                   <p className="ml-3">Recommended</p>

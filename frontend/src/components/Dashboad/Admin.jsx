@@ -42,8 +42,7 @@ function Admin() {
     console.log(data);
   };
   return (
-    <div className='flex text-sm fixed h-screen w-full'>
-      <SideBar />
+    <div className='flex text-sm h-screen w-full'>
     <div className=" form h-screen w-full flex flex-col bg-[#16181F] text-white items-center">
       <script src="https://cdn.tailwindcss.com"></script>
       <div className="m-auto w-1/3 flex flex-col bg-[#373B48] bg-opacity-70 shadow-2xl p-4 items-center">
