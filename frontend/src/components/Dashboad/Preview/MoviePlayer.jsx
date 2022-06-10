@@ -25,9 +25,9 @@ const MoviePlayer = () => {
         <Link to='/preview'>
           <BiArrowBack className="text-3xl p-2 bg-[#3C4049] rounded-full mr-6"/>
         </Link>
-				<div className="flex w-2/3 flex-col">
-					<video className="" ref={videoElement}  controls>
-						<source src="./src/videos/music.mp4" type="video/mp4" />
+				<div className="flex aspect-video w-2/3 flex-col">
+					<video className="max-h-full max-w-full" ref={videoElement}  controls>
+						<source src="./src/videos/UCL.mp4" type="video/mp4" />
 					</video>
 					<div className="flex mt-4 items-center">
 						<div className="flex items-center cursor-pointer">
